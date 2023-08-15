@@ -37,6 +37,7 @@
     height: 500px;
     border: none;
   }
+  /* Implementing a Chatbot icon */
   .chat-icon {
     position: fixed;
     bottom: 30px;
