@@ -1,33 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-  }
-  
-  h1 {
-    color: #0084ff;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #0084ff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #005cbf;
-  }
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
+/* This Font Used to select all HTML Text  */
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+
+/* Navbar Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+/* Navbar Ends */
+
+/* Webchat Css */
   #webchat {
     background-color: #f0f0f0;
   }
@@ -49,11 +46,5 @@ body {
     /* height: 50px; */
     border-radius: 50%;
   }
-
-/* Navbar Properties */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
 
 

@@ -7,16 +7,29 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Welcome to My Website</h1>
+   
+    <!-- Header section starts  -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="mentalmatelogo.png" alt="Mentalmate Logo">
+      </a>
+
+
+      <!-- Navbar  -->
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="login.php" class="cta">Login</a>
+      </nav>
+      <!-- Navbar ends  -->
+      
+
+
+    </header>
     <!-- Add your content here -->
     <div id="webchat" role="main">
-      <button class="close-button" onclick="toggleChat()">Close</button>
-    </div>
-    <div class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <span class="navbar-toggle" onclick="toggleNavbar()">&#9776;</span>
     </div>
     <img class="chat-icon" src="azurebot.jpg" onclick="toggleChat()" />
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
