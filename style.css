@@ -12,6 +12,24 @@
   text-decoration: none;
 }
 
+.root{
+  --green:#16a085;
+  --black:#444;
+  --light-color:#777;
+  --box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
+  --text-shadow: .4rem .4rem 0 rgba(0,0,0,.2);
+  --border:2rem solid var(--green);
+}
+
+html{
+  font-size: 62.5%;
+  overflow: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+/* Header Properties */
+.header{}
 /* Navbar Logo */
 .logo {
   display: flex;
