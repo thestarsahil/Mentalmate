@@ -18,7 +18,7 @@
   --light-color:#777;
   --box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
   --text-shadow: .4rem .4rem 0 rgba(0,0,0,.2);
-  --border:2rem solid var(--green);
+  --border:2rem solid #16a085;
 }
 
 html{
@@ -29,7 +29,49 @@ html{
 }
 
 /* Header Properties */
-.header{}
+.header{
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0; left: 0; right: 0; z-index:1000; 
+  background-color: #fff;
+  box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header  */
+.header .logo{
+  border-radius: 50%;
+
+}
+.header .logo i{
+ font-size: 1.5rem;
+ color: #16a085;
+}
+
+/* Header Navbar Properties  */
+.header .navbar a{
+  font-size: 1.7rem;
+  color: var(--light-color);
+  margin-left: 2rem;
+}
+
+/* Header navbar Hover */
+.header .navbar a:hover{
+  color:#16a085;
+
+}
+#menu-btn {
+  font-size: 2.5rem;
+  border-radius: .5rem;
+  background-color: #eee;
+  color: #16a085;
+  padding: .1rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 /* Navbar Logo */
 .logo {
   display: flex;
@@ -67,3 +109,95 @@ html{
   }
 
 
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+  @media (max-width: 991px){
+    html{
+      font-size: 55%;
+    }
+    .header{
+      padding: 2rem;
+    }
+  }
+
+    @media (max-width: 991px){
+    html{
+      font-size: 55%;
+    }
+    .header{
+      padding: 2rem;
+    }
+  }
+
+
+  /* Media Query */
+  @media (max-width: 768px){
+    html{
+      font-size: 50%;
+    }
+    .header{
+      padding: 1.5rem;
+    }
+    .header .navbar a{
+      font-size: 1.5rem;
+    }
+    #menu-btn{
+      display: block;
+    }
+    .header .navbar{
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background-color: #fff;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+    }
+    .header .navbar.active{
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .header .navbar.active a{
+      display: block;
+      margin: 2rem 0;
+    }
+    .header .navbar.active a:hover{
+      color: #16a085;
+    }
+  }
+
+  @media (max-width: 576px){
+    html{
+      font-size: 45%;
+    }
+    .header{
+      padding: 1rem;
+    }
+    .header .navbar a{
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 400px){
+    html{
+      font-size: 40%;
+    }
+    .header{
+      padding: 1rem;
+    }
+    .header .navbar a{
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+ 
