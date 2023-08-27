@@ -2,55 +2,79 @@
 <html>
   <head>
     <title>My Website</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   
     <!-- Header section starts  -->
     <header class="header">
-      <a href="#" class="logo"><i>MentalMate</i>
-        <img class="logo" src="mentalmatelogo.png" alt="Mentalmate Logo">
+      <a href="#" class="logo"
+        ><i>MentalMate</i>
+        <img class="logo" src="mentalmatelogo.png" alt="Mentalmate Logo" />
       </a>
-
 
       <!-- Navbar  -->
       <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- Add more navigation links here -->
+
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
         <a href="login.php" class="cta">Login</a>
       </nav>
       <!-- Navbar ends  -->
-      
-      <div id="menu-btn" class="fas fa-bars"></div>
-
     </header>
+    <!-- Header section ends  -->
 
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <section class="split left">
+      <div class="centered">
+        <h2>MentalMate</h2>
+        <p>Where DocBots Ready to Help !</p>
+        <form>
+          <input type="submit" value="Submit" class="submit-button" />
+        </form>
+      </div>
+
+      <div class="split right">
+        <div class="centered"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We are a team of developers who love building cool stuff.</p>
+        <img src="about-image.jpg" alt="About Image" />
+      </div>
+    </section>
 
     <!-- Add your content here -->
-    <div id="webchat" role="main">
-    </div>
+    <div id="webchat" role="main"></div>
     <img class="chat-icon" src="azurebot.jpg" onclick="toggleChat()" />
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <script>
       // Initialize the Web Chat control
-      window.WebChat.renderWebChat({
-        directLine: window.WebChat.createDirectLine({
-          secret: '7BvfwB7877k.bi4e-4SxmUQVEOwgB5oSsKREppWQpBePQTNqMOfXp_c'
-        }),
-        userID: 'YOUR_USER_ID_HERE',
-        username: 'YOUR_USERNAME_HERE',
-        locale: 'en-US',
-        botAvatarInitials: 'Bot',
-        userAvatarInitials: 'You'
-      }, document.getElementById('webchat'));
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({
+            secret: "7BvfwB7877k.bi4e-4SxmUQVEOwgB5oSsKREppWQpBePQTNqMOfXp_c",
+          }),
+          userID: "YOUR_USER_ID_HERE",
+          username: "YOUR_USERNAME_HERE",
+          locale: "en-US",
+          botAvatarInitials: "Bot",
+          userAvatarInitials: "You",
+        },
+        document.getElementById("webchat")
+      );
 
       function toggleChat() {
-        var webchatElement = document.getElementById('webchat');
-        var chatIconElement = document.querySelector('.chat-icon');
+        var webchatElement = document.getElementById("webchat");
+        var chatIconElement = document.querySelector(".chat-icon");
 
         if (webchatElement.style.display === "none") {
           webchatElement.style.display = "block";
